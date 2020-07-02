@@ -38,9 +38,9 @@
             this.CelularLabel = new System.Windows.Forms.Label();
             this.TelefonoLabel = new System.Windows.Forms.Label();
             this.CelularMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.CorreoTextBox = new System.Windows.Forms.TextBox();
+            this.DireccionTextBox = new System.Windows.Forms.TextBox();
+            this.NotaTextBox = new System.Windows.Forms.TextBox();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
@@ -132,29 +132,29 @@
             this.CelularMaskedTextBox.Size = new System.Drawing.Size(89, 22);
             this.CelularMaskedTextBox.TabIndex = 30;
             // 
-            // textBox1
+            // CorreoTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(105, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 22);
-            this.textBox1.TabIndex = 40;
+            this.CorreoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CorreoTextBox.Location = new System.Drawing.Point(105, 98);
+            this.CorreoTextBox.Name = "CorreoTextBox";
+            this.CorreoTextBox.Size = new System.Drawing.Size(254, 22);
+            this.CorreoTextBox.TabIndex = 40;
             // 
-            // textBox4
+            // DireccionTextBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(105, 133);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(254, 22);
-            this.textBox4.TabIndex = 50;
+            this.DireccionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DireccionTextBox.Location = new System.Drawing.Point(105, 133);
+            this.DireccionTextBox.Name = "DireccionTextBox";
+            this.DireccionTextBox.Size = new System.Drawing.Size(254, 22);
+            this.DireccionTextBox.TabIndex = 50;
             // 
-            // textBox2
+            // NotaTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(105, 168);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 22);
-            this.textBox2.TabIndex = 60;
+            this.NotaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotaTextBox.Location = new System.Drawing.Point(105, 168);
+            this.NotaTextBox.Name = "NotaTextBox";
+            this.NotaTextBox.Size = new System.Drawing.Size(254, 22);
+            this.NotaTextBox.TabIndex = 60;
             // 
             // NuevoButton
             // 
@@ -168,6 +168,7 @@
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // EliminarButton
             // 
@@ -181,6 +182,7 @@
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // GuardarButton
             // 
@@ -194,6 +196,7 @@
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // rContactos
             // 
@@ -203,9 +206,9 @@
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.NuevoButton);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NotaTextBox);
+            this.Controls.Add(this.DireccionTextBox);
+            this.Controls.Add(this.CorreoTextBox);
             this.Controls.Add(this.CelularMaskedTextBox);
             this.Controls.Add(this.TelefonoLabel);
             this.Controls.Add(this.CelularLabel);
@@ -219,7 +222,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "rContactos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registro de contactos";
+            this.Load += new System.EventHandler(this.rContactos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,9 +241,9 @@
         private System.Windows.Forms.Label CelularLabel;
         private System.Windows.Forms.Label TelefonoLabel;
         private System.Windows.Forms.MaskedTextBox CelularMaskedTextBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox CorreoTextBox;
+        private System.Windows.Forms.TextBox DireccionTextBox;
+        private System.Windows.Forms.TextBox NotaTextBox;
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Button GuardarButton;

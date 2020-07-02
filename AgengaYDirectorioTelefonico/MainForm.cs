@@ -13,7 +13,7 @@ namespace AgengaYDirectorioTelefonico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            rEventos rE = new rEventos();
+            rContactos rE = new rContactos(1);
             rE.ShowDialog();
         }
     }
