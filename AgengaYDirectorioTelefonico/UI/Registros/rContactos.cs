@@ -1,13 +1,6 @@
 ﻿using AgengaYDirectorioTelefonico.BLL;
 using AgengaYDirectorioTelefonico.Entidades;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AgengaYDirectorioTelefonico.UI.Registros
@@ -24,6 +17,7 @@ namespace AgengaYDirectorioTelefonico.UI.Registros
 
         public void Limpiar() // Funcion encargada de limpiar todos los campos del registro
         {
+            ContactoId = 0;
             NombreTextBox.Text = string.Empty;
             TelefonoMaskedTextBox.Text = string.Empty;
             CelularMaskedTextBox.Text = string.Empty;

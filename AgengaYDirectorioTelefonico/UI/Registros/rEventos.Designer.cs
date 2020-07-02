@@ -35,11 +35,11 @@
             this.DescripcionLabel = new System.Windows.Forms.Label();
             this.NotaLabel = new System.Windows.Forms.Label();
             this.FechaLabel = new System.Windows.Forms.Label();
-            this.NombreTextBox = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DescripcionTextBox = new System.Windows.Forms.TextBox();
+            this.FechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.HoraLabel = new System.Windows.Forms.Label();
             this.HoraComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.NotaTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // GuardarButton
@@ -54,6 +54,7 @@
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // EliminarButton
             // 
@@ -67,6 +68,7 @@
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // NuevoButton
             // 
@@ -80,6 +82,7 @@
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // DescripcionLabel
             // 
@@ -111,24 +114,24 @@
             this.FechaLabel.TabIndex = 91;
             this.FechaLabel.Text = "Fecha";
             // 
-            // NombreTextBox
+            // DescripcionTextBox
             // 
-            this.NombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreTextBox.Location = new System.Drawing.Point(120, 63);
-            this.NombreTextBox.Name = "NombreTextBox";
-            this.NombreTextBox.Size = new System.Drawing.Size(260, 22);
-            this.NombreTextBox.TabIndex = 93;
+            this.DescripcionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescripcionTextBox.Location = new System.Drawing.Point(120, 63);
+            this.DescripcionTextBox.Name = "DescripcionTextBox";
+            this.DescripcionTextBox.Size = new System.Drawing.Size(260, 22);
+            this.DescripcionTextBox.TabIndex = 93;
             // 
-            // dateTimePicker1
+            // FechaDateTimePicker
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(120, 28);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(110, 22);
-            this.dateTimePicker1.TabIndex = 106;
+            this.FechaDateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaDateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechaDateTimePicker.Location = new System.Drawing.Point(120, 28);
+            this.FechaDateTimePicker.Name = "FechaDateTimePicker";
+            this.FechaDateTimePicker.Size = new System.Drawing.Size(110, 22);
+            this.FechaDateTimePicker.TabIndex = 106;
             // 
             // HoraLabel
             // 
@@ -175,35 +178,37 @@
             this.HoraComboBox.TabIndex = 108;
             this.HoraComboBox.Text = "Hora";
             // 
-            // textBox3
+            // NotaTextBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(120, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(260, 22);
-            this.textBox3.TabIndex = 109;
+            this.NotaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotaTextBox.Location = new System.Drawing.Point(120, 98);
+            this.NotaTextBox.Name = "NotaTextBox";
+            this.NotaTextBox.Size = new System.Drawing.Size(260, 22);
+            this.NotaTextBox.TabIndex = 109;
             // 
             // rEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 193);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.NotaTextBox);
             this.Controls.Add(this.HoraComboBox);
             this.Controls.Add(this.HoraLabel);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.FechaDateTimePicker);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.DescripcionLabel);
             this.Controls.Add(this.NotaLabel);
             this.Controls.Add(this.FechaLabel);
-            this.Controls.Add(this.NombreTextBox);
+            this.Controls.Add(this.DescripcionTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "rEventos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registro de eventos";
+            this.Load += new System.EventHandler(this.rEventos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,10 +222,10 @@
         private System.Windows.Forms.Label DescripcionLabel;
         private System.Windows.Forms.Label NotaLabel;
         private System.Windows.Forms.Label FechaLabel;
-        private System.Windows.Forms.TextBox NombreTextBox;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox DescripcionTextBox;
+        private System.Windows.Forms.DateTimePicker FechaDateTimePicker;
         private System.Windows.Forms.Label HoraLabel;
         private System.Windows.Forms.ComboBox HoraComboBox;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox NotaTextBox;
     }
 }
