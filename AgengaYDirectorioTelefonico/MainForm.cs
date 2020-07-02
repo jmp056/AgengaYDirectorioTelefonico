@@ -1,4 +1,5 @@
-﻿using AgengaYDirectorioTelefonico.UI.Registros;
+﻿using AgengaYDirectorioTelefonico.UI.Consultas;
+using AgengaYDirectorioTelefonico.UI.Registros;
 using System;
 using System.Windows.Forms;
 
@@ -13,7 +14,7 @@ namespace AgengaYDirectorioTelefonico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            rEventos rE = new rEventos(4);
+            cContactos rE = new cContactos();
             rE.ShowDialog();
         }
     }
