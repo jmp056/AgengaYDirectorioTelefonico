@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AgengaYDirectorioTelefonico.UI.Registros;
+using System;
 using System.Windows.Forms;
 
 namespace AgengaYDirectorioTelefonico
@@ -15,6 +9,12 @@ namespace AgengaYDirectorioTelefonico
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            rContactos rC = new rContactos();
+            rC.ShowDialog();
         }
     }
 }

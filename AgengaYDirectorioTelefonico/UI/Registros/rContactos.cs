@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AgengaYDirectorioTelefonico.UI.Consultas
+namespace AgengaYDirectorioTelefonico.UI.Registros
 {
-    public partial class cContactos : Form
+    public partial class rContactos : Form
     {
-        public cContactos()
+        public rContactos()
         {
             InitializeComponent();
-        }
-
-        private void AgregarButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

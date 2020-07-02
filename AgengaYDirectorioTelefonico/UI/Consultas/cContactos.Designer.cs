@@ -78,6 +78,7 @@
             this.AgregarButton.TabIndex = 3;
             this.AgregarButton.Text = "Agregar nuevo contacto";
             this.AgregarButton.UseVisualStyleBackColor = true;
+            this.AgregarButton.Click += new System.EventHandler(this.AgregarButton_Click);
             // 
             // dataGridView1
             // 
