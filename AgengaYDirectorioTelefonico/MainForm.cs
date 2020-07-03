@@ -14,8 +14,14 @@ namespace AgengaYDirectorioTelefonico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cEventos rE = new cEventos();
-            rE.ShowDialog();
+            cContactos cC = new cContactos();
+            cC.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cEventos cE = new cEventos();
+            cE.ShowDialog();
         }
     }
 }
