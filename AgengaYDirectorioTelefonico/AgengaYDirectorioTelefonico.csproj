@@ -81,6 +81,12 @@
     <Compile Include="UI\Consultas\cContactos.Designer.cs">
       <DependentUpon>cContactos.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\cEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cEventos.Designer.cs">
+      <DependentUpon>cEventos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rContactos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Consultas\cContactos.resx">
       <DependentUpon>cContactos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cEventos.resx">
+      <DependentUpon>cEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rContactos.resx">
       <DependentUpon>rContactos.cs</DependentUpon>
